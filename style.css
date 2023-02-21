@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --clr-black: #222;
+  --clr-white: #fff;
+  --max-width: 1170px;
+  --fixed-width: 620px;
+  --clr-black-shade: #21130d;
+  --clr-orange-light: #f37c49;
+  --clr-orange-shade: #D2490e;
+  --clr-orange-deep: #93340b;
+  --transition: all 0.3s linear;
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 2.2;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+p {
+  color: var(--clr-grey-3);
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+hr {
+  border: none;
+  border-top: 1px solid var(--clr-white);
+  border-bottom: 1px solid var(--clr-white);
+}
+#logo {
+  width: 30px;
+  margin-left: 3.5rem;
+}
+.logo-container {cursor: pointer;}
+/* section */
+.section {
+  padding: 4rem 10% 0.5rem;
+}
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0.8125rem 0.7rem;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: var(--clr-orange-shade);
+}
+.fa-phone {
+  margin-right: 0.5rem;
+}
+.float-right {
+  float: right;
+}
+.active-text {
+  color: var(--clr-orange-shade)
+}
+.icon-text {
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  line-height: 1.25;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+.nav__links li a {
+  font-weight: bold;
+  color: var(--clr-black);
+  transition: var(--transition);
+}
+.nav__links li a:hover {
+  color: var(--clr-orange-shade);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 10%;
+}
+.nav__items {
+  display: flex;
+  align-items: center;
+}
+button {
+  padding: 0.7rem;
+  outline: none;
+  border: 1px solid #555555;
+  background-color: var(--clr-white);
+  border-radius: 0.3rem;
+  text-transform: capitalize;
+}
+.bar-icon {
+  display: none;
+}
+.hero {
+  display: flex;
+  height: auto;
+  padding: 3rem;
+  aspect-ratio: 2.5;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url("./images/hero.png");
+  background-position: left bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img {
+  flex: 1;
+  height: 100%;
+}
+.about-text {
+  flex: 1.5;
+}
+.about-img {
+ flex: 1;
+}
+.img-gallery {
+  object-fit: contain;
+  width: 100%;
+}
+.camera {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-white);
+  box-shadow: 0 5px 6px -2px #222;
+}
+.camera > img {
+  width: 50px;
+}
+.hero__container_text {
+  flex: 0.5;
+  font-family: "Times New Roman", Times, serif;
+}
+.hero__container_text > h2 {
+  color: rgb(10, 10, 10);
+}
+.hero__container_text > h1 {
+  display: inline-block;
+  padding: 0 0.7rem;
+  color: var(--clr-white);
+  font-weight: 500;
+  background-color: var(--clr-orange-deep);
+}
+.about {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+}
+.about-container {
+  display: inline-flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  color: var(--clr-white);
+  justify-content: center;
+  background-color: var(--clr-orange-deep);
+}
+.btn, .lorem {
+  margin-top: 1.3rem;
+}
+.bold {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    flex-direction: column;
+  }
+  .hero__container_text {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .about {
+    gap: 3rem;
+  }
+  .about-text {
+    flex: 1;
+  }
+  .bold {
+    font-size: 1.5rem;
+  }
+  .nav__items {
+    display: none;
+  }
+  .bar-icon {
+    display: block;
+    font-size: 1.5rem;
+  }
+}
